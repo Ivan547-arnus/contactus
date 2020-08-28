@@ -25,12 +25,7 @@ let container = {
             }
         },
         restartForm(){
-            this.name="";
-            this.email="";
-            this.text="";
-
-            this.submitted = false;
-            this.result = false;
+            window.location.reload(true);
         }
     },
     template:`
