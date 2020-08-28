@@ -23,6 +23,14 @@ let container = {
             if(this.name != "" && this.email != "" && this.text != ""){
                 this.$emit("submit",this);
             }
+        },
+        restartForm(){
+            this.name="";
+            this.email="";
+            this.text="";
+
+            this.submitted = false;
+            this.result = false;
         }
     },
     template:`
@@ -77,6 +85,11 @@ let container = {
                                 </span>
                                 <p class="louis-george text-center">
                                     {{infoSend}}
+                                </p>
+                                <p>
+                                    <a href="#" @click="restartForm">
+                                        <i class="icon-atras-1"></i> Volver
+                                    </a>
                                 </p>
                             </div>
                         </div>
