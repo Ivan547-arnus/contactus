@@ -11,6 +11,11 @@ let app = new Vue({
             let formData = new FormData();
             formData.append("to_mail","villegas.rojas.ivan@gmail.com");
             formData.append("to_name","Equipo de Arvispace");
+            formData.append("from_name",form.name);
+            formData.append("from_mail",form.email);
+            formData.append("subject","Requiero que me contactes a mi correo: "+form.email);
+            formData.append("title","Detalles de petición de contacto");
+            formData.append("descripcion",form.text);
             
             axios.post('https://arvispace.com/sendMailService/sendMailService.php',formData).then(function(response){
                 form.result = true;
