@@ -86,7 +86,7 @@ let container = {
                                 <p class="louis-george text-center">
                                     {{infoSend}}
                                 </p>
-                                <p>
+                                <p class="text-center">
                                     <a href="#" @click="restartForm">
                                         <i class="icon-atras-1"></i> Volver
                                     </a>
