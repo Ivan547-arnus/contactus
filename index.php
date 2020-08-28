@@ -32,29 +32,29 @@
     
     <!--CSS libraries-->
     <link rel="stylesheet" href="<?php echo $routes->libraries;?>bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo $routes->libraries;?>icons/icons.css">
+    <link rel="stylesheet" href="<?php echo $routes->libraries;?>icons/index.css">
     <link rel="stylesheet" href="<?php echo $routes->libraries;?>fonts/main.css">
 
 <body>
     <div id="root">
         <container
-            title="Hola mundo my bro ">
-        </container>
+            title="Hola mundo my bro "
+            @submit="onSubmit"
+        ></container>
     </div>
 </body>
 
 <!--Compontents-->
-<script src="<?php echo $routes->components;?>carousel.js"></script>
 <script src="<?php echo $routes->components;?>container.js"></script>
 
 <!--Root app-->
 <script src="<?php echo $routes->init;?>"></script>
 
-
-<script src="tilt/tilt.jquery.min.js"></script>
-<script >
+<script src="<?php echo $routes->libraries;?>tilt/tilt.jquery.min.js"></script>
+<script>
 	$('.js-tilt').tilt({
 		scale: 1.1
-	})
+	});
 </script>
+
 </html>
